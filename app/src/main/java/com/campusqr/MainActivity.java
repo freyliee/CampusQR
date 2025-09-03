@@ -1,5 +1,5 @@
 package com.campusqr;
-
+import com.google.firebase.auth.FirebaseAuth;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -34,11 +34,14 @@ public class MainActivity extends AppCompatActivity {
     private static final int CAMERA_REQUEST = 200;
 
     private BarcodeScanner scanner;
+    private FirebaseAuth mAuth; // добавляем FirebaseAuth
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mAuth = FirebaseAuth.getInstance();
 
         // Инициализация ML Kit сканера
         BarcodeScannerOptions options = new BarcodeScannerOptions.Builder()
@@ -50,13 +53,13 @@ public class MainActivity extends AppCompatActivity {
         TextView name = findViewById(R.id.name);
         TextView group = findViewById(R.id.group);
         Button scanBtn = findViewById(R.id.scanButton);
+        Button logoutBtn = findViewById(R.id.logoutButton); // находим кнопку
 
         // Show current user's info
         StudentRepository.Student me = StudentRepository.findById(CURRENT_STUDENT_ID);
         if (me != null) {
             name.setText(me.name);
             group.setText("Группа: " + me.group);
-            // Encode QR as "student:<id>"
             Bitmap bmp = generateQRCode("student:" + me.id);
             if (bmp != null) qrImage.setImageBitmap(bmp);
         }
@@ -67,6 +70,15 @@ public class MainActivity extends AppCompatActivity {
             } else {
                 requestCameraPermission();
             }
+        });
+
+        // Обработчик выхода
+        logoutBtn.setOnClickListener(v -> {
+            mAuth.signOut(); // выходим из Firebase
+            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+            finish();
         });
     }
 

@@ -24,16 +24,20 @@
         "source": "C:\\Users\\Misha\\.gradle\\daemon\\9.0-milestone-1\\com.campusqr.app-main-52:\\layout\\activity_login.xml"
     },
     {
+        "merged": "com.campusqr.app-debug-50:/drawable_qr_background.xml.flat",
+        "source": "com.campusqr.app-main-52:/drawable/qr_background.xml"
+    },
+    {
+        "merged": "com.campusqr.app-debug-50:/layout_activity_main.xml.flat",
+        "source": "com.campusqr.app-main-52:/layout/activity_main.xml"
+    },
+    {
         "merged": "C:\\Users\\Misha\\.gradle\\daemon\\9.0-milestone-1\\com.campusqr.app-debug-50:\\layout_activity_camera_scan.xml.flat",
         "source": "C:\\Users\\Misha\\.gradle\\daemon\\9.0-milestone-1\\com.campusqr.app-main-52:\\layout\\activity_camera_scan.xml"
     },
     {
         "merged": "C:\\Users\\Misha\\.gradle\\daemon\\9.0-milestone-1\\com.campusqr.app-debug-50:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "C:\\Users\\Misha\\.gradle\\daemon\\9.0-milestone-1\\com.campusqr.app-main-52:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
-    },
-    {
-        "merged": "com.campusqr.app-debug-50:/layout_activity_login.xml.flat",
-        "source": "com.campusqr.app-main-52:/layout/activity_login.xml"
     },
     {
         "merged": "C:\\Users\\Misha\\.gradle\\daemon\\9.0-milestone-1\\com.campusqr.app-debug-50:\\layout_activity_result.xml.flat",
