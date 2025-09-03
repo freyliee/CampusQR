@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="ic_new_background">#1465D2</color>
     <color name="md_theme_background">#FFFFFF</color>
     <color name="md_theme_onBackground">#000000</color>
     <color name="md_theme_onPrimary">#FFFFFF</color>
     <color name="md_theme_primary">#1F6FEB</color>
     <string name="access_granted">Доступ разрешён</string>
-    <string name="app_name">CampusQR</string>
+    <string name="app_name">UniPass</string>
     <string name="back">Назад</string>
     <string name="gcm_defaultSenderId" translatable="false">883352312481</string>
     <string name="google_api_key" translatable="false">AIzaSyC0ExlA_DDy0NIpSHAgr53Bf-I5okacIyI</string>

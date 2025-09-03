@@ -1,5 +1,6 @@
 R_DEF: Internal format may change without notice
 local
+color ic_new_background
 color md_theme_background
 color md_theme_onBackground
 color md_theme_onPrimary
@@ -33,6 +34,9 @@ layout activity_main
 layout activity_result
 mipmap ic_launcher
 mipmap ic_launcher_round
+mipmap ic_new
+mipmap ic_new_foreground
+mipmap ic_new_round
 string access_granted
 string app_name
 string back

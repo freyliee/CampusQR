@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\Misha\\.gradle\\daemon\\9.0-milestone-1\\com.campusqr.app-debug-50:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\Misha\\.gradle\\daemon\\9.0-milestone-1\\com.campusqr.app-main-52:\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "com.campusqr.app-debug-50:/mipmap-xxhdpi_ic_new_foreground.webp.flat",
+        "source": "com.campusqr.app-main-52:/mipmap-xxhdpi/ic_new_foreground.webp"
     },
     {
-        "merged": "C:\\Users\\Misha\\.gradle\\daemon\\9.0-milestone-1\\com.campusqr.app-debug-50:\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\Misha\\.gradle\\daemon\\9.0-milestone-1\\com.campusqr.app-main-52:\\drawable\\ic_launcher_background.xml"
+        "merged": "com.campusqr.app-debug-50:/mipmap-hdpi_ic_new_round.webp.flat",
+        "source": "com.campusqr.app-main-52:/mipmap-hdpi/ic_new_round.webp"
     },
     {
         "merged": "C:\\Users\\Misha\\.gradle\\daemon\\9.0-milestone-1\\com.campusqr.app-debug-50:\\drawable_ic_launcher_foreground.xml.flat",
@@ -16,31 +16,95 @@
         "source": "C:\\Users\\Misha\\.gradle\\daemon\\9.0-milestone-1\\com.campusqr.app-main-52:\\layout\\activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\Misha\\.gradle\\daemon\\9.0-milestone-1\\com.campusqr.app-debug-50:\\layout_activity_login.xml.flat",
-        "source": "C:\\Users\\Misha\\.gradle\\daemon\\9.0-milestone-1\\com.campusqr.app-main-52:\\layout\\activity_login.xml"
+        "merged": "com.campusqr.app-debug-50:/mipmap-hdpi_ic_new.webp.flat",
+        "source": "com.campusqr.app-main-52:/mipmap-hdpi/ic_new.webp"
     },
     {
-        "merged": "com.campusqr.app-debug-50:/layout_activity_result.xml.flat",
-        "source": "com.campusqr.app-main-52:/layout/activity_result.xml"
-    },
-    {
-        "merged": "C:\\Users\\Misha\\.gradle\\daemon\\9.0-milestone-1\\com.campusqr.app-debug-50:\\drawable_photo_2025_09_03_13_11_02.png.flat",
-        "source": "C:\\Users\\Misha\\.gradle\\daemon\\9.0-milestone-1\\com.campusqr.app-main-52:\\drawable\\photo_2025_09_03_13_11_02.png"
+        "merged": "com.campusqr.app-debug-50:/mipmap-xhdpi_ic_new.webp.flat",
+        "source": "com.campusqr.app-main-52:/mipmap-xhdpi/ic_new.webp"
     },
     {
         "merged": "C:\\Users\\Misha\\.gradle\\daemon\\9.0-milestone-1\\com.campusqr.app-debug-50:\\layout_activity_camera_scan.xml.flat",
         "source": "C:\\Users\\Misha\\.gradle\\daemon\\9.0-milestone-1\\com.campusqr.app-main-52:\\layout\\activity_camera_scan.xml"
     },
     {
+        "merged": "com.campusqr.app-debug-50:/mipmap-mdpi_ic_new_round.webp.flat",
+        "source": "com.campusqr.app-main-52:/mipmap-mdpi/ic_new_round.webp"
+    },
+    {
         "merged": "C:\\Users\\Misha\\.gradle\\daemon\\9.0-milestone-1\\com.campusqr.app-debug-50:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "C:\\Users\\Misha\\.gradle\\daemon\\9.0-milestone-1\\com.campusqr.app-main-52:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.campusqr.app-debug-50:/mipmap-mdpi_ic_new.webp.flat",
+        "source": "com.campusqr.app-main-52:/mipmap-mdpi/ic_new.webp"
+    },
+    {
+        "merged": "com.campusqr.app-debug-50:/mipmap-xxhdpi_ic_new_round.webp.flat",
+        "source": "com.campusqr.app-main-52:/mipmap-xxhdpi/ic_new_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Misha\\.gradle\\daemon\\9.0-milestone-1\\com.campusqr.app-debug-50:\\layout_activity_result.xml.flat",
+        "source": "C:\\Users\\Misha\\.gradle\\daemon\\9.0-milestone-1\\com.campusqr.app-main-52:\\layout\\activity_result.xml"
+    },
+    {
+        "merged": "com.campusqr.app-debug-50:/mipmap-xhdpi_ic_new_round.webp.flat",
+        "source": "com.campusqr.app-main-52:/mipmap-xhdpi/ic_new_round.webp"
+    },
+    {
+        "merged": "com.campusqr.app-debug-50:/mipmap-xxxhdpi_ic_new.webp.flat",
+        "source": "com.campusqr.app-main-52:/mipmap-xxxhdpi/ic_new.webp"
+    },
+    {
+        "merged": "com.campusqr.app-debug-50:/mipmap-anydpi-v26_ic_new.xml.flat",
+        "source": "com.campusqr.app-main-52:/mipmap-anydpi-v26/ic_new.xml"
     },
     {
         "merged": "C:\\Users\\Misha\\.gradle\\daemon\\9.0-milestone-1\\com.campusqr.app-debug-50:\\drawable_qr_background.xml.flat",
         "source": "C:\\Users\\Misha\\.gradle\\daemon\\9.0-milestone-1\\com.campusqr.app-main-52:\\drawable\\qr_background.xml"
     },
     {
-        "merged": "C:\\Users\\Misha\\.gradle\\daemon\\9.0-milestone-1\\com.campusqr.app-debug-50:\\layout_activity_result.xml.flat",
-        "source": "C:\\Users\\Misha\\.gradle\\daemon\\9.0-milestone-1\\com.campusqr.app-main-52:\\layout\\activity_result.xml"
+        "merged": "com.campusqr.app-debug-50:/mipmap-xxxhdpi_ic_new_round.webp.flat",
+        "source": "com.campusqr.app-main-52:/mipmap-xxxhdpi/ic_new_round.webp"
+    },
+    {
+        "merged": "com.campusqr.app-debug-50:/mipmap-xhdpi_ic_new_foreground.webp.flat",
+        "source": "com.campusqr.app-main-52:/mipmap-xhdpi/ic_new_foreground.webp"
+    },
+    {
+        "merged": "com.campusqr.app-debug-50:/mipmap-anydpi-v26_ic_new_round.xml.flat",
+        "source": "com.campusqr.app-main-52:/mipmap-anydpi-v26/ic_new_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\Misha\\.gradle\\daemon\\9.0-milestone-1\\com.campusqr.app-debug-50:\\drawable_photo_2025_09_03_13_11_02.png.flat",
+        "source": "C:\\Users\\Misha\\.gradle\\daemon\\9.0-milestone-1\\com.campusqr.app-main-52:\\drawable\\photo_2025_09_03_13_11_02.png"
+    },
+    {
+        "merged": "com.campusqr.app-debug-50:/mipmap-hdpi_ic_new_foreground.webp.flat",
+        "source": "com.campusqr.app-main-52:/mipmap-hdpi/ic_new_foreground.webp"
+    },
+    {
+        "merged": "com.campusqr.app-debug-50:/mipmap-xxxhdpi_ic_new_foreground.webp.flat",
+        "source": "com.campusqr.app-main-52:/mipmap-xxxhdpi/ic_new_foreground.webp"
+    },
+    {
+        "merged": "C:\\Users\\Misha\\.gradle\\daemon\\9.0-milestone-1\\com.campusqr.app-debug-50:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\Misha\\.gradle\\daemon\\9.0-milestone-1\\com.campusqr.app-main-52:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\Misha\\.gradle\\daemon\\9.0-milestone-1\\com.campusqr.app-debug-50:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\Misha\\.gradle\\daemon\\9.0-milestone-1\\com.campusqr.app-main-52:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Misha\\.gradle\\daemon\\9.0-milestone-1\\com.campusqr.app-debug-50:\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\Misha\\.gradle\\daemon\\9.0-milestone-1\\com.campusqr.app-main-52:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "com.campusqr.app-debug-50:/mipmap-xxhdpi_ic_new.webp.flat",
+        "source": "com.campusqr.app-main-52:/mipmap-xxhdpi/ic_new.webp"
+    },
+    {
+        "merged": "com.campusqr.app-debug-50:/mipmap-mdpi_ic_new_foreground.webp.flat",
+        "source": "com.campusqr.app-main-52:/mipmap-mdpi/ic_new_foreground.webp"
     }
 ]
