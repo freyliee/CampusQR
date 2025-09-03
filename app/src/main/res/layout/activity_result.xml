@@ -13,10 +13,12 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:padding="20dp"
-        app:cardCornerRadius="16dp"
-        app:cardElevation="6dp"
+        android:padding="28dp"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="8dp"
         app:cardBackgroundColor="#1E1E1E"
+        app:strokeColor="#2A2A2A"
+        app:strokeWidth="2dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/scanAgain"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,11 +33,11 @@
                 android:id="@+id/resultTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Карточка студента"
+                android:text="  Карточка студента"
                 android:textColor="@android:color/white"
                 android:textSize="22sp"
                 android:textStyle="bold"
-                android:paddingBottom="12dp" />
+                android:paddingBottom="14dp" />
 
             <TextView
                 android:id="@+id/resultName"
@@ -52,6 +54,7 @@
                 android:layout_height="wrap_content"
                 android:text="Группа: ИКБО-01"
                 android:textColor="#E0E0E0"
+                android:textSize="18sp"
                 android:layout_marginTop="4dp"/>
 
             <TextView
@@ -60,17 +63,19 @@
                 android:layout_height="wrap_content"
                 android:text="Статус: Студент"
                 android:textColor="#E0E0E0"
+                android:textSize="18sp"
                 android:layout_marginTop="4dp"/>
 
             <TextView
                 android:id="@+id/access"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="✅ Доступ разрешён"
+                android:text=" ✅ Доступ разрешён"
                 android:textColor="#4CAF50"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                android:layout_marginTop="16dp"/>
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="12dp"/>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
@@ -88,6 +93,6 @@
         app:layout_constraintTop_toBottomOf="@id/studentCard"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="24dp"/>
+        android:layout_marginTop="36dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
