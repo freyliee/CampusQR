@@ -1,8 +1,6 @@
 package com.campusqr;
-import com.google.firebase.auth.FirebaseAuth;
-import android.Manifest;
+
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.widget.Button;
@@ -10,31 +8,29 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.mlkit.vision.barcode.BarcodeScanner;
 import com.google.mlkit.vision.barcode.BarcodeScannerOptions;
 import com.google.mlkit.vision.barcode.BarcodeScanning;
-import com.google.mlkit.vision.barcode.common.Barcode;
-import com.google.mlkit.vision.common.InputImage;
-
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.WriterException;
-import com.google.zxing.qrcode.QRCodeWriter;
 import com.google.zxing.common.BitMatrix;
+import com.google.zxing.qrcode.QRCodeWriter;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String CURRENT_STUDENT_ID = "1001"; // Demo user
     private static final int CAMERA_PERMISSION_REQUEST = 100;
     private static final int CAMERA_REQUEST = 200;
 
+    private FirebaseAuth mAuth;
+    private FirebaseFirestore db;
     private BarcodeScanner scanner;
-    private FirebaseAuth mAuth; // добавляем FirebaseAuth
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -42,10 +38,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mAuth = FirebaseAuth.getInstance();
+        db = FirebaseFirestore.getInstance();
 
-        // Инициализация ML Kit сканера
+        // Инициализация ML Kit сканера (для QR-кодов)
         BarcodeScannerOptions options = new BarcodeScannerOptions.Builder()
-                .setBarcodeFormats(Barcode.FORMAT_QR_CODE)
+                .setBarcodeFormats(com.google.mlkit.vision.barcode.common.Barcode.FORMAT_QR_CODE)
                 .build();
         scanner = BarcodeScanning.getClient(options);
 
@@ -53,17 +50,28 @@ public class MainActivity extends AppCompatActivity {
         TextView name = findViewById(R.id.name);
         TextView group = findViewById(R.id.group);
         Button scanBtn = findViewById(R.id.scanButton);
-        Button logoutBtn = findViewById(R.id.logoutButton); // находим кнопку
+        Button logoutBtn = findViewById(R.id.logoutButton);
 
-        // Show current user's info
-        StudentRepository.Student me = StudentRepository.findById(CURRENT_STUDENT_ID);
-        if (me != null) {
-            name.setText(me.name);
-            group.setText("Группа: " + me.group);
-            Bitmap bmp = generateQRCode("student:" + me.id);
-            if (bmp != null) qrImage.setImageBitmap(bmp);
+        // Загружаем данные текущего пользователя и генерируем QR-код
+        if (mAuth.getCurrentUser() != null) {
+            String uid = mAuth.getCurrentUser().getUid();
+            db.collection("users").document(uid).get()
+                    .addOnSuccessListener(documentSnapshot -> {
+                        Student s = documentSnapshot.toObject(Student.class);
+                        if (s != null) {
+                            s.id = uid;
+                            name.setText(s.name);
+                            group.setText("Группа: " + s.group);
+                            Bitmap bmp = generateQRCode("student:" + s.id);
+                            if (bmp != null) qrImage.setImageBitmap(bmp);
+                        }
+                    })
+                    .addOnFailureListener(e ->
+                            Toast.makeText(MainActivity.this, "Ошибка загрузки данных: " + e.getMessage(), Toast.LENGTH_LONG).show()
+                    );
         }
 
+        // Кнопка сканирования
         scanBtn.setOnClickListener(v -> {
             if (checkCameraPermission()) {
                 startCameraActivity();
@@ -72,9 +80,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Обработчик выхода
+        // Кнопка выхода
         logoutBtn.setOnClickListener(v -> {
-            mAuth.signOut(); // выходим из Firebase
+            mAuth.signOut();
             Intent intent = new Intent(MainActivity.this, LoginActivity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(intent);
@@ -83,14 +91,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private boolean checkCameraPermission() {
-        return ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA)
-                == PackageManager.PERMISSION_GRANTED;
+        return ContextCompat.checkSelfPermission(this, android.Manifest.permission.CAMERA)
+                == android.content.pm.PackageManager.PERMISSION_GRANTED;
     }
 
     private void requestCameraPermission() {
         ActivityCompat.requestPermissions(this,
-                new String[]{Manifest.permission.CAMERA},
-                CAMERA_PERMISSION_REQUEST);
+                new String[]{android.Manifest.permission.CAMERA}, CAMERA_PERMISSION_REQUEST);
     }
 
     private void startCameraActivity() {
@@ -116,46 +123,41 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,@NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-
-        if (requestCode == CAMERA_PERMISSION_REQUEST) {
-            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                startCameraActivity();
-            } else {
-                Toast.makeText(this, "Разрешение на камеру необходимо для сканирования",
-                        Toast.LENGTH_SHORT).show();
-            }
-        }
-    }
-
+    // Получение результата из CameraScanActivity
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
         if (requestCode == CAMERA_REQUEST && resultCode == RESULT_OK && data != null) {
             String scannedData = data.getStringExtra("scanned_data");
-            if (scannedData != null) {
-                // Expecting format "student:<id>"
-                String id = scannedData.startsWith("student:") ?
-                        scannedData.substring("student:".length()) : scannedData;
+            if (scannedData != null && scannedData.startsWith("student:")) {
+                String studentId = scannedData.substring("student:".length());
+
+                // Открываем ResultActivity с переданным student_id
                 Intent intent = new Intent(this, ResultActivity.class);
-                intent.putExtra("student_id", id);
+                intent.putExtra("student_id", studentId);
                 startActivity(intent);
             } else {
-                Toast.makeText(this, "Не удалось считать QR код", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Неверный QR-код", Toast.LENGTH_SHORT).show();
             }
-        } else if (requestCode == CAMERA_REQUEST && resultCode == RESULT_CANCELED) {
-            Toast.makeText(this, "Сканирование отменено", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == CAMERA_PERMISSION_REQUEST) {
+            if (grantResults.length > 0 && grantResults[0] == android.content.pm.PackageManager.PERMISSION_GRANTED) {
+                startCameraActivity();
+            } else {
+                Toast.makeText(this, "Разрешение на камеру необходимо для сканирования", Toast.LENGTH_SHORT).show();
+            }
         }
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if (scanner != null) {
-            scanner.close();
-        }
+        if (scanner != null) scanner.close();
     }
 }

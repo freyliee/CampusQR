@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
@@ -38,9 +39,12 @@ public final class ActivityResultBinding implements ViewBinding {
   @NonNull
   public final Button scanAgain;
 
+  @NonNull
+  public final CardView studentCard;
+
   private ActivityResultBinding(@NonNull ConstraintLayout rootView, @NonNull TextView access,
       @NonNull TextView resultGroup, @NonNull TextView resultName, @NonNull TextView resultStatus,
-      @NonNull TextView resultTitle, @NonNull Button scanAgain) {
+      @NonNull TextView resultTitle, @NonNull Button scanAgain, @NonNull CardView studentCard) {
     this.rootView = rootView;
     this.access = access;
     this.resultGroup = resultGroup;
@@ -48,6 +52,7 @@ public final class ActivityResultBinding implements ViewBinding {
     this.resultStatus = resultStatus;
     this.resultTitle = resultTitle;
     this.scanAgain = scanAgain;
+    this.studentCard = studentCard;
   }
 
   @Override
@@ -113,8 +118,14 @@ public final class ActivityResultBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.studentCard;
+      CardView studentCard = ViewBindings.findChildViewById(rootView, id);
+      if (studentCard == null) {
+        break missingId;
+      }
+
       return new ActivityResultBinding((ConstraintLayout) rootView, access, resultGroup, resultName,
-          resultStatus, resultTitle, scanAgain);
+          resultStatus, resultTitle, scanAgain, studentCard);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

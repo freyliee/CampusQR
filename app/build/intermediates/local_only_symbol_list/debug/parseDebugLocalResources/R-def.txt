@@ -25,6 +25,7 @@ id resultStatus
 id resultTitle
 id scanAgain
 id scanButton
+id studentCard
 id title
 layout activity_camera_scan
 layout activity_login
