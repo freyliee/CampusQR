@@ -7,7 +7,12 @@ color md_theme_primary
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 id access
+id btnLogin
+id editEmail
+id editPassword
 id group
+id loginTitle
+id logoText
 id name
 id previewView
 id qrImage
@@ -19,6 +24,7 @@ id scanAgain
 id scanButton
 id title
 layout activity_camera_scan
+layout activity_login
 layout activity_main
 layout activity_result
 mipmap ic_launcher
@@ -26,9 +32,15 @@ mipmap ic_launcher_round
 string access_granted
 string app_name
 string back
+string gcm_defaultSenderId
+string google_api_key
+string google_app_id
+string google_crash_reporting_api_key
+string google_storage_bucket
 string group_label
 string my_qr
 string name_label
+string project_id
 string scan_again
 string scan_qr
 string status_label
