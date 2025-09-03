@@ -6,6 +6,7 @@ color md_theme_onPrimary
 color md_theme_primary
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable photo_2025_09_03_13_11_02
 drawable qr_background
 id access
 id btnLogin
@@ -13,7 +14,7 @@ id editEmail
 id editPassword
 id group
 id loginTitle
-id logoText
+id logo
 id logoutButton
 id name
 id previewView

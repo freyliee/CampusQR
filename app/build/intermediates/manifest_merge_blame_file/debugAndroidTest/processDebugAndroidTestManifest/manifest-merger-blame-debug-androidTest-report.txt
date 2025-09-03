@@ -3,32 +3,32 @@
 3    package="com.campusqr.test" >
 4
 5    <uses-sdk
-5-->C:\Users\Misha\StudioProjects\CampusQR\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest6695637199265081265.xml:5:5-74
+5-->D:\Downloads\CampusQR_MVP_Android_Java\CampusQR\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest8129843949825616078.xml:5:5-74
 6        android:minSdkVersion="24"
-6-->C:\Users\Misha\StudioProjects\CampusQR\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest6695637199265081265.xml:5:15-41
+6-->D:\Downloads\CampusQR_MVP_Android_Java\CampusQR\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest8129843949825616078.xml:5:15-41
 7        android:targetSdkVersion="34" />
-7-->C:\Users\Misha\StudioProjects\CampusQR\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest6695637199265081265.xml:5:42-71
+7-->D:\Downloads\CampusQR_MVP_Android_Java\CampusQR\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest8129843949825616078.xml:5:42-71
 8
 9    <instrumentation
-9-->C:\Users\Misha\StudioProjects\CampusQR\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest6695637199265081265.xml:11:5-15:62
+9-->D:\Downloads\CampusQR_MVP_Android_Java\CampusQR\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest8129843949825616078.xml:11:5-15:62
 10        android:name="android.test.InstrumentationTestRunner"
-10-->C:\Users\Misha\StudioProjects\CampusQR\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest6695637199265081265.xml:11:22-75
+10-->D:\Downloads\CampusQR_MVP_Android_Java\CampusQR\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest8129843949825616078.xml:11:22-75
 11        android:functionalTest="false"
-11-->C:\Users\Misha\StudioProjects\CampusQR\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest6695637199265081265.xml:14:22-52
+11-->D:\Downloads\CampusQR_MVP_Android_Java\CampusQR\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest8129843949825616078.xml:14:22-52
 12        android:handleProfiling="false"
-12-->C:\Users\Misha\StudioProjects\CampusQR\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest6695637199265081265.xml:13:22-53
+12-->D:\Downloads\CampusQR_MVP_Android_Java\CampusQR\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest8129843949825616078.xml:13:22-53
 13        android:label="Tests for com.campusqr"
-13-->C:\Users\Misha\StudioProjects\CampusQR\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest6695637199265081265.xml:15:22-60
+13-->D:\Downloads\CampusQR_MVP_Android_Java\CampusQR\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest8129843949825616078.xml:15:22-60
 14        android:targetPackage="com.campusqr" />
-14-->C:\Users\Misha\StudioProjects\CampusQR\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest6695637199265081265.xml:12:22-58
+14-->D:\Downloads\CampusQR_MVP_Android_Java\CampusQR\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest8129843949825616078.xml:12:22-58
 15
 16    <application
-16-->C:\Users\Misha\StudioProjects\CampusQR\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest6695637199265081265.xml:7:5-9:19
+16-->D:\Downloads\CampusQR_MVP_Android_Java\CampusQR\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest8129843949825616078.xml:7:5-9:19
 17        android:debuggable="true"
 18        android:extractNativeLibs="false" >
 19        <uses-library android:name="android.test.runner" />
-19-->C:\Users\Misha\StudioProjects\CampusQR\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest6695637199265081265.xml:8:9-60
-19-->C:\Users\Misha\StudioProjects\CampusQR\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest6695637199265081265.xml:8:23-57
+19-->D:\Downloads\CampusQR_MVP_Android_Java\CampusQR\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest8129843949825616078.xml:8:9-60
+19-->D:\Downloads\CampusQR_MVP_Android_Java\CampusQR\app\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest8129843949825616078.xml:8:23-57
 20    </application>
 21
 22</manifest>

@@ -1,26 +1,18 @@
 [
     {
-        "merged": "C:\\Users\\Misha\\.gradle\\daemon\\9.0-milestone-1\\com.campusqr.app-mergeDebugResources-49:\\layout\\activity_camera_scan.xml",
-        "source": "C:\\Users\\Misha\\.gradle\\daemon\\9.0-milestone-1\\com.campusqr.app-main-52:\\layout\\activity_camera_scan.xml"
-    },
-    {
-        "merged": "C:\\Users\\Misha\\.gradle\\daemon\\9.0-milestone-1\\com.campusqr.app-mergeDebugResources-49:\\layout\\activity_login.xml",
-        "source": "C:\\Users\\Misha\\.gradle\\daemon\\9.0-milestone-1\\com.campusqr.app-main-52:\\layout\\activity_login.xml"
-    },
-    {
-        "merged": "C:\\Users\\Misha\\.gradle\\daemon\\9.0-milestone-1\\com.campusqr.app-mergeDebugResources-49:\\layout\\activity_register.xml",
-        "source": "C:\\Users\\Misha\\.gradle\\daemon\\9.0-milestone-1\\com.campusqr.app-main-52:\\layout\\activity_register.xml"
-    },
-    {
-        "merged": "C:\\Users\\Misha\\.gradle\\daemon\\9.0-milestone-1\\com.campusqr.app-mergeDebugResources-49:\\layout\\activity_main.xml",
-        "source": "C:\\Users\\Misha\\.gradle\\daemon\\9.0-milestone-1\\com.campusqr.app-main-52:\\layout\\activity_main.xml"
+        "merged": "com.campusqr.app-mergeDebugResources-49:/layout/activity_result.xml",
+        "source": "com.campusqr.app-main-52:/layout/activity_result.xml"
     },
     {
         "merged": "com.campusqr.app-mergeDebugResources-49:/layout/activity_main.xml",
         "source": "com.campusqr.app-main-52:/layout/activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\Misha\\.gradle\\daemon\\9.0-milestone-1\\com.campusqr.app-mergeDebugResources-49:\\layout\\activity_result.xml",
-        "source": "C:\\Users\\Misha\\.gradle\\daemon\\9.0-milestone-1\\com.campusqr.app-main-52:\\layout\\activity_result.xml"
+        "merged": "com.campusqr.app-mergeDebugResources-49:/layout/activity_login.xml",
+        "source": "com.campusqr.app-main-52:/layout/activity_login.xml"
+    },
+    {
+        "merged": "com.campusqr.app-mergeDebugResources-49:/layout/activity_camera_scan.xml",
+        "source": "com.campusqr.app-main-52:/layout/activity_camera_scan.xml"
     }
 ]
