@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "883352312481",
+    "project_id": "hackaton-d6e1d",
+    "storage_bucket": "hackaton-d6e1d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:883352312481:android:7eae54b05289c4df30aee0",
+        "android_client_info": {
+          "package_name": "com.campusqr"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0ExlA_DDy0NIpSHAgr53Bf-I5okacIyI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
