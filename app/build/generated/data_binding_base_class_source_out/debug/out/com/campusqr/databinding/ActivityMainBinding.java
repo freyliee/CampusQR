@@ -25,6 +25,9 @@ public final class ActivityMainBinding implements ViewBinding {
   public final TextView group;
 
   @NonNull
+  public final Button logoutButton;
+
+  @NonNull
   public final TextView name;
 
   @NonNull
@@ -37,10 +40,11 @@ public final class ActivityMainBinding implements ViewBinding {
   public final TextView title;
 
   private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull TextView group,
-      @NonNull TextView name, @NonNull ImageView qrImage, @NonNull Button scanButton,
-      @NonNull TextView title) {
+      @NonNull Button logoutButton, @NonNull TextView name, @NonNull ImageView qrImage,
+      @NonNull Button scanButton, @NonNull TextView title) {
     this.rootView = rootView;
     this.group = group;
+    this.logoutButton = logoutButton;
     this.name = name;
     this.qrImage = qrImage;
     this.scanButton = scanButton;
@@ -80,6 +84,12 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.logoutButton;
+      Button logoutButton = ViewBindings.findChildViewById(rootView, id);
+      if (logoutButton == null) {
+        break missingId;
+      }
+
       id = R.id.name;
       TextView name = ViewBindings.findChildViewById(rootView, id);
       if (name == null) {
@@ -104,8 +114,8 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityMainBinding((ConstraintLayout) rootView, group, name, qrImage, scanButton,
-          title);
+      return new ActivityMainBinding((ConstraintLayout) rootView, group, logoutButton, name,
+          qrImage, scanButton, title);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
