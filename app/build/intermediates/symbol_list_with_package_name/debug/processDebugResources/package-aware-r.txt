@@ -3144,6 +3144,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable photo_2025_09_03_13_11_02
 drawable qr_background
 drawable test_level_drawable
 drawable tooltip_frame_dark
@@ -3409,7 +3410,7 @@ id linear
 id listMode
 id list_item
 id loginTitle
-id logoText
+id logo
 id logoutButton
 id m3_side_sheet
 id marquee

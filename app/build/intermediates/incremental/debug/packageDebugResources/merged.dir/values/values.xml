@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="md_theme_background">#FFFFFF</color>
+    <color name="md_theme_onBackground">#000000</color>
+    <color name="md_theme_onPrimary">#FFFFFF</color>
+    <color name="md_theme_primary">#1F6FEB</color>
+    <string name="access_granted">Доступ разрешён</string>
+    <string name="app_name">CampusQR</string>
+    <string name="back">Назад</string>
+    <string name="gcm_defaultSenderId" translatable="false">883352312481</string>
+    <string name="google_api_key" translatable="false">AIzaSyC0ExlA_DDy0NIpSHAgr53Bf-I5okacIyI</string>
+    <string name="google_app_id" translatable="false">1:883352312481:android:7eae54b05289c4df30aee0</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyC0ExlA_DDy0NIpSHAgr53Bf-I5okacIyI</string>
+    <string name="google_storage_bucket" translatable="false">hackaton-d6e1d.firebasestorage.app</string>
+    <string name="group_label">Группа</string>
+    <string name="my_qr">Мой QR</string>
+    <string name="name_label">ФИО</string>
+    <string name="project_id" translatable="false">hackaton-d6e1d</string>
+    <string name="scan_again">Сканировать ещё</string>
+    <string name="scan_qr">Сканировать QR</string>
+    <string name="status_label">Статус</string>
+    <style name="Theme.CampusQR" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/md_theme_primary</item>
+        <item name="android:statusBarColor">@color/md_theme_primary</item>
+    </style>
+</resources>
